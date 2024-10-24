@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/c1.css">
+    <style>
+        body {
+                 margin: 0;
+                 font-family: Arial, sans-serif;
+             }
+             .navbar {
+                 background-color: #3b5a47;
+                 padding: 10px 20px;
+                 display: flex;
+                 align-items: center;
+                 justify-content: space-between;
+             }
+             .navbar .logo {
+                 display: flex;
+                 align-items: center;
+             }
+             .navbar .logo img {
+                 height: 40px;
+                 margin-right: 10px;
+             }
+             .navbar .logo span {
+                 color: white;
+                 font-size: 18px;
+             }
+             .navbar .menu {
+                 display: flex;
+                 align-items: center;
+             }
+             .navbar .menu a {
+                 color: white;
+                 margin: 0 10px;
+                 text-decoration: none;
+                 font-size: 14px;
+             }
+             .navbar .search-bar {
+                 display: flex;
+                 align-items: center;
+                 background-color: white;
+                 border-radius: 20px;
+                 padding: 5px 10px;
+                 width: 400px;
+             }
+             .navbar .search-bar input {
+                 border: none;
+                 outline: none;
+                 width: 100%;
+                 padding: 5px;
+             }
+             .navbar .search-bar i {
+                 color: #3b5a47;
+             }
+             .navbar .icons {
+                 display: flex;
+                 align-items: center;
+             }
+             .navbar .icons a {
+                 color: white;
+                 margin: 0 10px;
+                 text-decoration: none;
+                 font-size: 14px;
+                 display: flex;
+                 align-items: center;
+             }
+             .navbar .icons a i {
+                 margin-right: 5px;
+             }
+             .navbar .icons .cart {
+                 position: relative;
+             }
+             .navbar .icons .cart .badge {
+                 position: absolute;
+                 top: -5px;
+                 right: -10px;
+                 background-color: orange;
+                 color: white;
+                 border-radius: 50%;
+                 padding: 2px 5px;
+                 font-size: 12px;
+             }
+       </style>
+</head>
+<body>
+    <header class="header"> 
+        <div class="navbar">
+            <div class="logo">
+             <img alt="Company Logo" height="100" src="images/vicchy.jpg" width="100"/>
+             <span>
+              HASAKI
+              <br/>
+         
+             </span>
+            </div>
+            <div class="menu">
+             <a href="#">
+              Kem Chống Nắng
+             </a>
+             <a href="#">
+              Tẩy Trang
+             </a>
+             <a href="#">
+              Toner
+             </a>
+             <a href="#">
+              Sữa Rửa Mặt
+             </a>
+             <a href="#">
+              Tẩy tế bào chết
+             </a>
+             <a href="#">
+              Retinol
+             </a>
+            </div>
+            <div class="search-bar">
+             <input placeholder="Khai trương CN223 TP. Hội An, Quảng Nam | Deal 2K (Chỉ 27/10)" type="text"/>
+             <i class="fas fa-search">
+             </i>
+            </div>
+            <div class="icons">
+             <a href="#">
+              <i class="fas fa-user">
+              </i>
+              Đăng nhập / Đăng ký
+              <br/>
+              Tài khoản
+             </a>
+             <a href="#">
+              <i class="fas fa-store">
+              </i>
+              Hệ thống
+              <br/>
+              cửa hàng
+             </a>
+             <a href="#">
+              <i class="fas fa-phone">
+              </i>
+              Hỗ trợ
+              <br/>
+              khách hàng
+             </a>
+             <a class="cart" href="#">
+              <i class="fas fa-shopping-cart">
+              </i>
+              <span class="badge">
+               0
+              </span>
+             </a>
+            </div>
+           </div>
+    </header>
+    <nav id="menu"> 
+        <a href="#top">Flash Deal</a>
+        <a href="#listkhoahoc">Nổi Bật</a>
+        <a href="#listhocvien">Mỹ Phẩm</a>
+        <a href="#listcoso">Hasaki Clinic</a>
+    </nav>
+    <main> 
+        <section id="listkhoahoc">
+            <h2 style="color: red;">Danh Mục Nổi Bật</h2>
+            <div id="data"></div>
+        </section>
+        <section id="listhocvien">
+            <h2 style="color: red;"> Mỹ Phẩm </h2>
+            <div id="data"></div>
+        </section>
+        <section id="listcoso">
+            <h2 > Hasaki Clinic     <span style="margin-left: 15px;color: green;">Bảng Giá</span> </h2>
+            <div id="data"></div>
+        </section>
+        <section id="listthuonghieu">
+            <h2> Thương hiệu</h2>
+            <div id="data"></div>
+        </section>
+    </main>
+    <footer> Họ tên sinh viên: Trịnh Tuấn Vỹ PS33706</footer>
+</body>
+</html>
+<script type="module">
+   import { showlistkhoahoc, showlisthocvien, showlistcoso , showlistthuonghieu} from './js/app.js';
+   document.querySelector("#listkhoahoc #data").innerHTML = showlistkhoahoc();
+   document.querySelector("#listhocvien #data").innerHTML = showlisthocvien();
+   document.querySelector("#listcoso #data").innerHTML = showlistcoso();
+   document.querySelector("#listthuonghieu #data").innerHTML = await showlistthuonghieu();
+
+</script>
